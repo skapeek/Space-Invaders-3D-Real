@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UIText Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UIText
+  m_TableCollectionNameGuidString: d236df7aba3cae148845d276887e2033
+  m_Entries:
+  - m_Id: 843693441024
+    m_Key: k_Settings_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1716096090112
+    m_Key: k_Records_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2125988642816
+    m_Key: k_Play_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2405006327808
+    m_Key: k_Options_Accept
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2463080660992
+    m_Key: k_Options_Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7128954454016
+    m_Key: k_Music_Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7134625153024
+    m_Key: k_SFX_Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10386586484736
+    m_Key: k_Language_Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10896995532800
+    m_Key: 'k_Current_Language
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2758639299334144
+    m_Key: k_Singleplayer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2758864801894400
+    m_Key: k_LocalCoop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2759024541962240
+    m_Key: k_OnlineCoop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2760524395712512
+    m_Key: k_GoBackToMenu
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1637237308433

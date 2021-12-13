@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UIText_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: d236df7aba3cae148845d276887e2033, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1716096090112
+    m_Localized: "\rEnregistrements"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 843693441024
+    m_Localized: "Param\xE8tres"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2125988642816
+    m_Localized: Jouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2463080660992
+    m_Localized: Annuler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2405006327808
+    m_Localized: Accepter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7128954454016
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7134625153024
+    m_Localized: Effets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10386586484736
+    m_Localized: "\rLangage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10896995532800
+    m_Localized: "Fran\xE7ois"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2758639299334144
+    m_Localized: Un joueur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2758864801894400
+    m_Localized: "Local Coop\xE9ratif"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2759024541962240
+    m_Localized: Coop en Ligne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2760524395712512
+    m_Localized: Appuyez sur "ESC" pour revenir au menu
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
