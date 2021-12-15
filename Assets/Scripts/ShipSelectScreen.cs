@@ -16,10 +16,9 @@ public class ShipSelectScreen : MonoBehaviour
     public ShipData[] shipArray;
     public Button left;
     public Button right;
-    public GameObject[] shipModels;
+    public GameObject[] selectedShip;
 
-    private float speed = 0.01f;
-    private float speedSliderValue;
+    private float speed = 0.03f;
 
     private void OnEnable()
     {
@@ -36,51 +35,49 @@ public class ShipSelectScreen : MonoBehaviour
         shipName2.text = shipArray[chosenShip].spaceshipName;
         shipName3.text = shipArray[chosenShip].spaceshipName;
 
-        speedSlider.value = speedSliderValue;
-        if (Input.GetKeyDown(KeyCode.F))
+
+        if (speedSlider.value < (shipArray[chosenShip].speed - 0.09))
         {
-            StartCoroutine(changeSlider());
+            speedSlider.value += Mathf.Lerp(0, shipArray[chosenShip].speed, speed); //primero: 0, 5, 0.1;  segundo: 0, 8, 0.1;
+        }
+        if (speedSlider.value > (shipArray[chosenShip].speed + 0.09))
+        {
+            //speedSlider.value -= Mathf.Lerp(shipArray[chosenShip].speed, speedSlider.value, speed); //tercero: 2, 8, 0.1
+            speedSlider.value -= Time.deltaTime * 25;
         }
 
+        if (shieldSlider.value < (shipArray[chosenShip].shield - 0.09))
+        {
+            shieldSlider.value += Mathf.Lerp(0, shipArray[chosenShip].shield, speed);
+        }
+        if (shieldSlider.value > (shipArray[chosenShip].shield + 0.09))
+        {
+            shieldSlider.value -= Time.deltaTime * 25;
+        }
 
-        if (shieldSlider.value < shipArray[chosenShip].shield)
+        if (rofSlider.value < (shipArray[chosenShip].rof - 0.09))
         {
-            shieldSlider.value += Time.deltaTime * speed;
+            rofSlider.value += Mathf.Lerp(0, shipArray[chosenShip].rof, speed);
         }
-        if (rofSlider.value < shipArray[chosenShip].rof)
+        if (rofSlider.value > (shipArray[chosenShip].rof + 0.09))
         {
-            rofSlider.value += Time.deltaTime * speed;
+            rofSlider.value -= Time.deltaTime * 25;
         }
-        if (shieldSlider.value > shipArray[chosenShip].shield)
+
+        if (chosenShip == 0)
         {
-            shieldSlider.value -= Time.deltaTime * speed;
+            selectedShip[0].SetActive(true);
+            selectedShip[1].SetActive(false);
+            selectedShip[2].SetActive(false);
         }
-        if (rofSlider.value > shipArray[chosenShip].rof)
+        if (chosenShip == 1)
         {
-            rofSlider.value -= Time.deltaTime * speed;
+            selectedShip[0].SetActive(false);
+            selectedShip[1].SetActive(true);
+            selectedShip[2].SetActive(false);
         }
 
     }
-    IEnumerator changeSlider()
-    {
-        if (speedSliderValue < shipArray[chosenShip].speed)
-        {
-            while (speedSliderValue < shipArray[chosenShip].speed)
-            {
-                speedSliderValue += Mathf.Lerp(speedSliderValue, shipArray[chosenShip].speed, speed);
-                yield return null;
-            }
-        } else if (speedSliderValue > shipArray[chosenShip].speed)
-            {
-                while (speedSliderValue > shipArray[chosenShip].speed)
-                {
-                    speedSliderValue += Mathf.Lerp(shipArray[chosenShip].speed, speedSliderValue, speed);
-                    yield return null;
-                }
-            }
-    }
-
-
     public void changeUP()
     {
         chosenShip++;
